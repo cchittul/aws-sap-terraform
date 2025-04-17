@@ -12,7 +12,7 @@ iam_roles = {
     managed_policies = [
       "AmazonSSMManagedInstanceCore"
     ]
-    permissions_boundary_arn = "arn:aws:iam::ACCOUNT_ID:policy/example-permissions-boundary-rds"
+    permissions_boundary_arn = "arn:aws:iam::081931583374:policy/example-permissions-boundary-rds"
   },
   role2 = {
     name = "iam-role-sap-ec2-ha"
@@ -62,7 +62,7 @@ iam_policies = {
         actions = [
           "ec2:ReplaceRoute",
         ]
-        resources = ["arn:aws:ec2:us-east-1:ACCOUNT_ID:route-table/rtb-09728cc740c68d955"]
+        resources = ["arn:aws:ec2:us-east-1:081931583374:route-table/rtb-09728cc740c68d955"]
       }
       stmt2 = {
         effect = "Allow"
@@ -96,7 +96,7 @@ iam_policies = {
           "ec2:StartInstances",
           "ec2:StopInstances",
         ]
-        resources = ["arn:aws:ec2::us-east-1:ACCOUNT_ID:instance/*"]
+        resources = ["arn:aws:ec2::us-east-1:081931583374:instance/*"]
       }
     }
   },
@@ -117,7 +117,7 @@ iam_policies = {
           "s3:HeadObject",
           "s3:DeleteObject",
         ]
-        resources = ["arn:aws:s3:::sap-media-bucket"]
+        resources = ["arn:aws:s3:::launchwizardccmedia"]
       }
       stmt2 = {
         effect = "Allow"
@@ -134,7 +134,7 @@ iam_policies = {
           "logs:PutLogEvents",
           "logs:TagLogGroup"
         ]
-        resources = ["arn:aws:logs:us-east-1:ACCOUNT_ID:log-group:sap-logs:*"]
+        resources = ["arn:aws:logs:us-east-1:081931583374:log-group:sap-logs:*"]
       }
     }
   }
